@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES='2, 3' python -u main.py \
+    --model_type='dualbert'\
+    --savedmodel_path='save/dualbert_roberta_large_fd6_fh12/fgm_ema_mask_sl_384_lr5e-5/' \
+    --ckpt_file='dualbert_best_mean_f1' \
+    --final_ckpt_file='dualbert_final' \
+    --learning_rate=5e-5 \
+    --bert_seq_length=384 \
+    --bert_dir='hfl/chinese-roberta-wwm-ext-large'\
+    --bert_tokenizer_dir='hfl/chinese-roberta-wwm-ext-large'\
+    --fusion_num_hidden_layers=6 \
+    --fusion_num_attention_heads=12 \
