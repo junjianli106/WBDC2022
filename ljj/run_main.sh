@@ -1,0 +1,10 @@
+CUDA_VISIBLE_DEVICES=1,2 python -u main.py \
+    --scheduler='cosine'\
+    --batch_size=48\
+    --patience=1\
+    --fgm_epsilon=1.5\
+    --bert_output_size=768\
+    --savedmodel_path='save/VisualBertMultiModal_base_2022610//pretrained3_mlm_110W_w_fp16_seq_len256_ema_fgm1.5_learning_rate-cosine-9e-5_bs32'\
+    --learning_rate=9e-5 \
+    --bert_seq_length=256\
+    --fp16=True
